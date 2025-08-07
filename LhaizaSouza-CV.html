@@ -2,7 +2,7 @@
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Portfólio - Lhaiza de Souza Silva</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -17,36 +17,42 @@
             line-height: 1.6;
             background: linear-gradient(to bottom, #F4DEFA, #ffffff);
             color: #333;
+            font-size: 16px;
         }
         header {
             background: linear-gradient(135deg, #6B2D78, #B18FCF);
             color: #fff;
             text-align: center;
-            padding: 4rem 1rem;
+            padding: 3rem 1rem;
             box-shadow: 0 4px 10px rgba(0,0,0,0.2);
         }
         header h1 {
-            font-size: 2.8rem;
+            font-size: 2rem;
             margin-bottom: 0.5rem;
         }
         nav {
             position: sticky;
             top: 0;
             background: #1a1a1a;
-            padding: 1rem;
+            padding: 0.5rem;
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         nav ul {
             list-style: none;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 2rem;
+            gap: 1rem;
+            margin: 0;
+            padding: 0.5rem;
         }
         nav a {
             color: #fff;
             text-decoration: none;
             font-weight: 400;
+            font-size: 0.9rem;
+            padding: 0.5rem;
             position: relative;
             transition: color 0.3s ease;
         }
@@ -67,34 +73,34 @@
             width: 100%;
         }
         section {
-            max-width: 1000px;
-            margin: 2rem auto;
-            padding: 2rem;
+            max-width: 100%;
+            margin: 1rem;
+            padding: 1.5rem;
             background: #fff;
             border-radius: 10px;
             box-shadow: 0 4px 15px rgba(0,0,0,0.1);
         }
         h2 {
             color: #6B2D78;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             margin-bottom: 1rem;
             border-bottom: 3px solid #F4DEFA;
             padding-bottom: 0.5rem;
         }
         .contact, .info, .education, .experience, .courses, .extracurricular, .languages {
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
         .contact .contact-info {
             display: flex;
-            flex-wrap: wrap;
-            gap: 1rem;
-            justify-content: center;
+            flex-direction: column;
+            gap: 0.8rem;
+            align-items: flex-start;
         }
         .contact .contact-item {
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            font-size: 1.1rem;
+            font-size: 1rem;
             transition: transform 0.3s ease;
         }
         .contact .contact-item:hover i {
@@ -108,8 +114,8 @@
         .profile-pic {
             display: block;
             margin: 0 auto 1rem;
-            width: 150px;
-            height: 150px;
+            width: 120px;
+            height: 120px;
             border-radius: 50%;
             object-fit: cover;
             border: 3px solid #F4DEFA;
@@ -122,7 +128,7 @@
         }
         .card {
             background: #f9f9f9;
-            padding: 1.5rem;
+            padding: 1rem;
             border-radius: 8px;
             margin-bottom: 1rem;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -133,7 +139,7 @@
         }
         .courses ul, .extracurricular ul, .languages ul {
             list-style: none;
-            padding-left: 1rem;
+            padding-left: 1.5rem;
         }
         .courses li, .extracurricular li, .languages li {
             margin: 0.5rem 0;
@@ -148,30 +154,46 @@
         }
         footer {
             text-align: center;
-            padding: 1.5rem;
+            padding: 1rem;
             background: #1a1a1a;
             color: #fff;
-            margin-top: 2rem;
+            margin-top: 1.5rem;
+            font-size: 0.9rem;
         }
-        @media (max-width: 768px) {
+        @media (min-width: 768px) {
             header h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
             nav ul {
-                flex-direction: column;
-                gap: 1rem;
+                flex-direction: row;
+                gap: 1.5rem;
+            }
+            nav a {
+                font-size: 1rem;
+                padding: 0.5rem 1rem;
             }
             section {
-                margin: 1rem;
-                padding: 1.5rem;
+                max-width: 800px;
+                margin: 2rem auto;
+                padding: 2rem;
             }
             .contact .contact-info {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 1.5rem;
             }
             .profile-pic {
-                width: 100px;
-                height: 100px;
+                width: 150px;
+                height: 150px;
+            }
+        }
+        @media (min-width: 1024px) {
+            section {
+                max-width: 1000px;
+            }
+            header h1 {
+                font-size: 2.8rem;
             }
         }
     </style>
